@@ -35,6 +35,15 @@ Start the development server:
 Configuration
 The application can be configured by modifying the settings.py file located in the ToDo_Task directory. You can set the database configuration, email settings for notifications, and other relevant parameters.
 
+
+Access APi:
+path('<int:pk>/', DetailToDo.as_view()),    # <int:pk> is primary key or 'id'
+path('show', ListToDo.as_view()),
+path('create', CreateToDo.as_view()),
+path('update/<int:pk>', UpdateToDo.as_view()),
+path('delete/<int:pk>', DeleteToDo.as_view())
+
+
 Contributing
 We welcome contributions to improve ToDo_Task! If you find any issues or have suggestions for new features, please submit an issue or a pull request on our GitHub repository. Make sure to follow our contribution guidelines.
 
